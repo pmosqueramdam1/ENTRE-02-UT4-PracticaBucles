@@ -31,7 +31,7 @@ public class PracticaBucles {
      *   Utiliza solo bucles while
      */
     public void generarNumeros(int n)   {
-       //TODO
+        
 
     }
 
@@ -40,8 +40,10 @@ public class PracticaBucles {
      *  Hazlo sin utilizar if
      */
     public boolean esImpar(int numero)   {
-        //TODO
-        
+        int n = numero;
+        while (n % 2 == 0) {
+            return true;
+        }
         
         return  false;
     }
