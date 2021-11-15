@@ -35,9 +35,9 @@ public class PracticaBucles {
         int numeros = 0;
         int numero = generador.nextInt(6001) - 1000;
         double media = 0;
+        double sumaImp = 0;
+        double maxPar = 0;
         int resul = 0;
-        int sumaImp = 0;
-        int maxPar = 0;
         while (numero != 0 && numeros <= n) {
             numero = generador.nextInt(6001) - 1000;
             
@@ -52,20 +52,20 @@ public class PracticaBucles {
             
             
             if (esImpar(numero)) {
-                sumaImp = sumaImp + numero;
+                sumaImp += numero;
             }
             
             
-            if (!esImpar(numero) && numero > maxPar) {
+            if (numero % 2 == 0 && numero > maxPar) {
                 maxPar = numero;
             }
             
         }
         System.out.println();
         System.out.println();
-        System.out.printf("%25s" + "%10.2f", "Media: ", media);
-        System.out.printf("%25s" + "%10.2f", "Suma impares: ", sumaImp);
-        System.out.printf("%25s" + "%10.2f", "Máximo pares: ", maxPar);
+        System.out.printf("%25s%10.2f\n", "Media: ", media);
+        System.out.printf("%25s%10.2f\n", "Suma impares: ", sumaImp);
+        System.out.printf("%25s%10.2f", "Máximo pares: ", maxPar);
     }
 
     /**
@@ -141,7 +141,11 @@ public class PracticaBucles {
      *   
      */
     public void escribirLetraN(int altura)    {
-       //TODO
+        System.out.println("Letra N -  Altura: " + altura);
+        for (int i = 0; i < altura; i++) {
+            escribirCaracter(CARACTER, altura);
+        }
+        
 
     }
 
@@ -150,6 +154,7 @@ public class PracticaBucles {
      *  con bucles for
      */
     private void escribirCaracter(char caracter, int n)    {
+        caracter = CARACTER;
         for (int i = n; i <= n; i++) {
             System.out.println(caracter);
         }
