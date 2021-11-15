@@ -52,18 +52,12 @@ public class PracticaBucles {
             
             
             if (esImpar(numero)) {
-                sumaImp += sumaImp+ numero;
+                sumaImp = sumaImp + numero;
             }
             
             
-            if (!esImpar(numero)) {
-                if (numeros == 1) {
-                    maxPar = numero;
-                }
-                
-                if (numero > maxPar) {
-                    maxPar = numero;
-                }
+            if (!esImpar(numero) && numero > maxPar) {
+                maxPar = numero;
             }
             
         }
